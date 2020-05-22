@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styles from './Navigation.module.css'
 
 const Navigation = () => {
   const links = [
@@ -22,10 +23,10 @@ const Navigation = () => {
   ]
   return (
     <nav>
-      <ul>
+      <ul className={styles.navList}>
         {links.map(({ href, linkText }) => (
           <li key={href}>
-            <Link to={href}>
+            <Link className={styles.navLinks} to={href}>
               {linkText}
             </Link>
           </li>
