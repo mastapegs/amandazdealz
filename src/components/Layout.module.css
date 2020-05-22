@@ -1,0 +1,10 @@
+.header {
+  background: hsl(0, 0%, 70%);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hero {
+  margin: 5px;
+  padding: 5px;
+}

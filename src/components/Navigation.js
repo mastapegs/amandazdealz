@@ -25,7 +25,7 @@ const Navigation = () => {
     <nav>
       <ul className={styles.navList}>
         {links.map(({ href, linkText }) => (
-          <li key={href}>
+          <li className={styles.navItems} key={href}>
             <Link className={styles.navLinks} to={href}>
               {linkText}
             </Link>
