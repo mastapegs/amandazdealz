@@ -6,7 +6,19 @@ const Navigation = () => {
     {
       href: '/',
       linkText: 'Home'
-    }
+    },
+    {
+      href: '/about',
+      linkText: 'About'
+    },
+    {
+      href: '/contact',
+      linkText: 'Contact'
+    },
+    {
+      href: '/blog',
+      linkText: 'Blog'
+    },
   ]
   return (
     <nav>
