@@ -5,6 +5,8 @@
   justify-content: space-evenly;
   font-size: .7em;
   min-height: 5em;
+  border-bottom: 5px solid hsl(300, 100%, 40%);
+  border-top: 5px solid hsl(300, 100%, 40%);
 }
 
 .hero {
