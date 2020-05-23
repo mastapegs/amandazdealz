@@ -5,8 +5,8 @@ import styles from './Navigation.module.css'
 const Navigation = () => {
   const links = [
     {
-      href: '/',
-      linkText: 'Home'
+      href: '/shop',
+      linkText: 'Shop'
     },
     {
       href: '/about',
