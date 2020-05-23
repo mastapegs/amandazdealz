@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import PageTitle from '../components/PageTitle'
 import Img from 'gatsby-image'
 
 export const query = graphql`
@@ -22,7 +23,7 @@ const Product = ({ pageContext, data }) => {
   const { product } = pageContext
   return (
     <>
-      <h1>{product.title}</h1>
+      <PageTitle titleText={product.title} />
       <p>{product.description}</p>
       {data.shopifyProduct.images.map(image => (
         <Img fluid={image.localFile.childImageSharp.fluid} />
