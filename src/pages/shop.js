@@ -1,9 +1,10 @@
 import React from 'react'
+import PageTitle from '../components/PageTitle'
 
 const Shop = () => {
   return (
     <>
-      <h1>Shop</h1>
+      <PageTitle titleText='Shop' />
     </>
   )
 }

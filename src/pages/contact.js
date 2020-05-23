@@ -1,9 +1,10 @@
 import React from 'react'
+import PageTitle from '../components/PageTitle'
 
 const Contact = () => {
   return (
     <>
-      <h1>Contact</h1>
+      <PageTitle titleText='Contact' />
     </>
   )
 }

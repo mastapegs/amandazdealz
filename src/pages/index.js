@@ -1,9 +1,10 @@
 import React from 'react'
+import PageTitle from '../components/PageTitle'
 
 const Index = () => {
   return (
     <>
-      <h1>Home</h1>
+      <PageTitle titleText='Home' />
     </>
   )
 }
