@@ -1,5 +1,5 @@
 .header {
-  background: hsl(0, 0%, 70%);
+  background: hsl(300, 50%, 70%);
   display: flex;
   justify-content: space-evenly;
   font-size: .7em;
@@ -21,7 +21,7 @@
 .main {
   width: 80%;
   margin: 30px auto;
-  background: white;
+  background: hsl(0, 0%, 80%);
   min-height: 60vh;
   padding: 10px 20px;
   border-radius: 20px;
