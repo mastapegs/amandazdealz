@@ -8,9 +8,6 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             title
-            images {
-              originalSrc
-            }
             shopifyId
             handle
             description
@@ -36,6 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/Product.js`),
       context: {
         product: node,
+        shopifyId: node.shopifyId
       },
     })
   })
