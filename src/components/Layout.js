@@ -13,7 +13,7 @@ const Layout = ({ children: page }) => {
         </div>
         <Navigation />
       </header>
-      <main>
+      <main className={styles.main}>
         {page}
       </main>
     </>

@@ -16,3 +16,17 @@
   text-decoration: none;
   text-shadow: 1px 1px 1px black;
 }
+
+.main {
+  width: 80%;
+  margin: 30px auto;
+  background: white;
+  height: 80vh;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px;
+}
+
+.main h1 {
+  margin: 0;
+}
