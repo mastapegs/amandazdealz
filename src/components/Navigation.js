@@ -6,19 +6,19 @@ const Navigation = () => {
   const links = [
     {
       href: '/shop',
-      linkText: 'Shop'
+      linkText: '💰 Shop'
     },
     {
       href: '/about',
-      linkText: 'About'
+      linkText: '👧 About'
     },
     {
       href: '/contact',
-      linkText: 'Contact'
+      linkText: '📱 Contact'
     },
     {
       href: '/blog',
-      linkText: 'Blog'
+      linkText: '✒️ Blog'
     },
   ]
   return (

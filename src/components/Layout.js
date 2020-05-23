@@ -9,7 +9,7 @@ const Layout = ({ children: page }) => {
     <>
       <header className={styles.header}>
         <div className={styles.hero}>
-          <Link className={styles.link} to={'/'}>Amandaz Dealz</Link>
+          <Link className={styles.link} to={'/'}>🏠 Amandaz Dealz</Link>
         </div>
         <Navigation />
       </header>
