@@ -40,7 +40,7 @@ const Shop = ({ data }) => {
       <PageTitle titleText='Shop' />
       <ul className={styles.productList}>
         {data.allShopifyProduct.edges.map(({ node }) => (
-          <li key={node.shopifyId}>
+          <li className={styles.products} key={node.shopifyId}>
             <h3>
               <Link className={styles.links} to={`/product/${node.handle}`}>{node.title}</Link>
               {" - "}${Number(node.priceRange.minVariantPrice.amount).toFixed(2)}
