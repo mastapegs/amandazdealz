@@ -25,7 +25,7 @@
   min-height: 60vh;
   padding: 10px 20px;
   border-radius: 20px;
-  box-shadow: 10px 10px 10px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.5);
 }
 
 .main h1 {
