@@ -1,6 +1,7 @@
 import React from 'react'
 import PageTitle from '../components/PageTitle'
 import { Link, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 export const query = graphql`
   {
@@ -11,6 +12,16 @@ export const query = graphql`
           shopifyId
           description
           handle
+          images {
+            localFile {
+              childImageSharp {
+                id
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
           priceRange {
             minVariantPrice {
               amount
@@ -33,6 +44,9 @@ const Shop = ({ data }) => {
               <Link to={`/product/${node.handle}`}>{node.title}</Link>
               {" - "}${Number(node.priceRange.minVariantPrice.amount).toFixed(2)}
             </h3>
+            {node.images.map(image => (
+              <Img fluid={image.localFile.childImageSharp.fluid} />
+            ))}
             <p>{node.description}</p>
           </li>
         ))}
