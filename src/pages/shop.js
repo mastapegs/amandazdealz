@@ -1,6 +1,6 @@
 import React from 'react'
 import PageTitle from '../components/PageTitle'
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 export const query = graphql`
   {
@@ -30,8 +30,8 @@ const Shop = ({ data }) => {
         {data.allShopifyProduct.edges.map(({ node }) => (
           <li key={node.shopifyId}>
             <h3>
-              {node.title}
-              {" - "}${Number(node.priceRange.minVariantPrice.amount).toFixed(2)}
+              <Link to={`/product/${node.handle}`}>{node.title}</Link>
+              {" - "}${node.priceRange.minVariantPrice.amount}
             </h3>
             <p>{node.description}</p>
           </li>
