@@ -1,14 +1,13 @@
 .header {
   background: hsl(300, 50%, 70%);
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   font-size: .7em;
+  min-height: 5em;
 }
 
 .hero {
-  margin: 5px;
-  padding: 5px;
-  width: 30%;
   font-weight: bold;
 }
 
