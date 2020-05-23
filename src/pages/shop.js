@@ -31,7 +31,7 @@ const Shop = ({ data }) => {
           <li key={node.shopifyId}>
             <h3>
               <Link to={`/product/${node.handle}`}>{node.title}</Link>
-              {" - "}${node.priceRange.minVariantPrice.amount}
+              {" - "}${Number(node.priceRange.minVariantPrice.amount).toFixed(2)}
             </h3>
             <p>{node.description}</p>
           </li>
