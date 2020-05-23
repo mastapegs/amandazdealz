@@ -8,6 +8,13 @@
 .navItems {
   margin: 5px;
   padding: 5px;
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+
+.navItems:last-child {
+  border-right: none;
+  padding-right: 5px;
 }
 
 .navLinks {
