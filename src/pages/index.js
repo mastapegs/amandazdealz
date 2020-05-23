@@ -4,7 +4,7 @@ import PageTitle from '../components/PageTitle'
 const Index = () => {
   return (
     <>
-      <PageTitle titleText='Home' />
+      <PageTitle titleText='Amandaz Dealz' />
     </>
   )
 }
