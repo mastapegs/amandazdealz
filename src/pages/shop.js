@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageTitle from '../components/PageTitle'
 import { Link, graphql } from "gatsby"
 import Img from 'gatsby-image'
@@ -35,6 +35,14 @@ export const query = graphql`
 `
 
 const Shop = ({ data }) => {
+  useEffect(() => {
+    const client = window.ShopifyBuy.buildClient({
+      domain: 'amandaz-dealz.myshopify.com',
+      storefrontAccessToken: '7bb072426eb538dc4f6a913355f95c24'
+    })
+    const ui = window.ShopifyBuy.UI.init(client);
+    window.ui = ui
+  })
   return (
     <>
       <PageTitle titleText='Shop' />
@@ -46,7 +54,7 @@ const Shop = ({ data }) => {
               {" - "}${Number(node.priceRange.minVariantPrice.amount).toFixed(2)}
             </h3>
             {node.images.map(image => (
-              <Link to={`/product/${node.handle}`}>
+              <Link key={node.handle} to={`/product/${node.handle}`}>
                 <Img fluid={image.localFile.childImageSharp.fluid} />
               </Link>
             ))}
