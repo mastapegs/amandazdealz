@@ -21,8 +21,8 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buy-button-js/2.1.3/buybutton.min.js"></script>
       </body>
-      <script src="http://sdks.shopifycdn.com/buy-button/2.1.3/buybutton.js"></script>
     </html>
   )
 }
