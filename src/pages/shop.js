@@ -42,30 +42,15 @@ const Shop = ({ data }) => {
     })
     const ui = window.ShopifyBuy.UI.init(client);
     window.ui = ui
-    ui.createComponent('product', {
-      id: 2210322940033,
+    ui.createComponent('collection', {
+      id: 97485652097,
       node: document.getElementById('my-product')
-    });
+    })
   }, [])
   return (
     <>
       <PageTitle titleText='Shop' />
-      <ul id='my-product' className={styles.productList}>
-        {data.allShopifyProduct.edges.map(({ node }) => (
-          <li className={styles.products} key={node.shopifyId}>
-            <h3>
-              <Link className={styles.links} to={`/product/${node.handle}`}>{node.title}</Link>
-              {" - "}${Number(node.priceRange.minVariantPrice.amount).toFixed(2)}
-            </h3>
-            {node.images.map(image => (
-              <Link key={node.handle} to={`/product/${node.handle}`}>
-                <Img fluid={image.localFile.childImageSharp.fluid} />
-              </Link>
-            ))}
-            <p>{node.description}</p>
-          </li>
-        ))}
-      </ul>
+      <div id='my-product'></div>
     </>
   )
 }
