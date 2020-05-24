@@ -42,11 +42,15 @@ const Shop = ({ data }) => {
     })
     const ui = window.ShopifyBuy.UI.init(client);
     window.ui = ui
-  })
+    ui.createComponent('product', {
+      id: 2210322940033,
+      node: document.getElementById('my-product')
+    });
+  }, [])
   return (
     <>
       <PageTitle titleText='Shop' />
-      <ul className={styles.productList}>
+      <ul id='my-product' className={styles.productList}>
         {data.allShopifyProduct.edges.map(({ node }) => (
           <li className={styles.products} key={node.shopifyId}>
             <h3>
